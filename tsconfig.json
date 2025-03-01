@@ -26,6 +26,10 @@
     ],
     "paths": {
       "@environments/*": ["environments/*"],
+      "@interfaces/*": ["app/interfaces/*"],
+      "@layouts/*": ["app/layouts/*"],
+      "@pages/*": ["app/pages/*"],
+      "@auth/*": ["app/auth/*"],
     }
   },
   "angularCompilerOptions": {
