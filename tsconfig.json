@@ -30,6 +30,7 @@
       "@layouts/*": ["app/layouts/*"],
       "@pages/*": ["app/pages/*"],
       "@auth/*": ["app/auth/*"],
+      "@shared/*": ["app/shared/*"],
     }
   },
   "angularCompilerOptions": {

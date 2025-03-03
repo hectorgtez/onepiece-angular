@@ -1,3 +1,16 @@
-<p>page-layout works!</p>
-<router-outlet/>
+<div class="flex">
+  <!-- Sidebar -->
+  <div class="fixed left-0">
+    <app-sidebar/>
+  </div>
 
+  <div class="w-full pl-64">
+    <!-- Navbar -->
+    <app-navbar/>
+
+    <!-- Content page -->
+    <div class="h-[calc(100vh-3.5rem)]">
+      <router-outlet/>
+    </div>
+  </div>
+</div>

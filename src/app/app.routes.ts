@@ -26,8 +26,8 @@ export const routes: Routes = [
     component: PageLayoutComponent,
     children: [
       {
-        path: 'dashboard',
-        loadComponent: () => import('@pages/dashboard/dashboard.component').then(c => c.DashboardComponent)
+        path: 'home',
+        loadComponent: () => import('@pages/home/home.component').then(c => c.HomeComponent)
       },
       {
         path: 'profile',
@@ -35,7 +35,7 @@ export const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'dashboard'
+        redirectTo: 'home'
       },
     ]
   },
