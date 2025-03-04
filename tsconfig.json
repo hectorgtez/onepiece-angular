@@ -31,6 +31,7 @@
       "@pages/*": ["app/pages/*"],
       "@auth/*": ["app/auth/*"],
       "@shared/*": ["app/shared/*"],
+      "@services/*": ["app/services/*"],
     }
   },
   "angularCompilerOptions": {

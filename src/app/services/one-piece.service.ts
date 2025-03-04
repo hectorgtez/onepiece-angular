@@ -10,16 +10,18 @@ import { Fruit } from '@interfaces/fruit.interface';
   providedIn: 'root'
 })
 export class OnePieceService {
-  private _http = inject(HttpClient);
+  private _http: HttpClient;
+  private _apiUrl: string;
 
-  private apiUrl: string = environment.apiUrl;
-
-  constructor() { }
+  constructor() {
+    this._http = inject(HttpClient);
+    this._apiUrl = environment.apiUrl;
+  }
 
   /**
    * Obtain all fruits list from API
    */
   public getAllFruits(): Observable<Fruit[]> {
-    return this._http.get<Fruit[]>(`${this.apiUrl}/fruits/en`);
+    return this._http.get<Fruit[]>(`${this._apiUrl}/fruits/en`);
   }
 }
