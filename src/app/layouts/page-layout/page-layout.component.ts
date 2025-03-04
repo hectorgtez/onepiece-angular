@@ -1,3 +1,4 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -9,6 +10,7 @@ import { SidebarComponent } from '@shared/components/sidebar/sidebar.component';
   standalone: true,
   imports: [
     RouterOutlet,
+    NgClass,
     NavbarComponent,
     SidebarComponent,
   ],
@@ -16,5 +18,9 @@ import { SidebarComponent } from '@shared/components/sidebar/sidebar.component';
   styleUrl: './page-layout.component.scss'
 })
 export class PageLayoutComponent {
+  public showSidebar: boolean = true;
 
+  public toggleSidebar(): void {
+    this.showSidebar = !this.showSidebar;
+  }
 }

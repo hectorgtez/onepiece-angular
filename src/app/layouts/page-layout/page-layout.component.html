@@ -1,12 +1,20 @@
 <div class="flex">
   <!-- Sidebar -->
-  <div class="fixed left-0">
+  <div
+    class="fixed transition-all"
+    [ngClass]="showSidebar ? 'left-0' : '-left-64'"
+  >
     <app-sidebar/>
   </div>
 
-  <div class="w-full pl-64">
+  <div
+    class="w-full transition-all"
+    [ngClass]="showSidebar ? 'pl-64' : 'pl-0'"
+  >
     <!-- Navbar -->
-    <app-navbar/>
+    <app-navbar
+      (sidebarToggled)="toggleSidebar()"
+    />
 
     <!-- Content page -->
     <div class="h-[calc(100vh-3.5rem)]">
