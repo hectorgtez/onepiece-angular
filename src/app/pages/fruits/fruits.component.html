@@ -1,2 +1,8 @@
-<p>fruits works!</p>
-{{fruits | json}}
+<div class="flex flex-wrap justify-evenly gap-5">
+  @for(fruit of fruits; track fruit) {
+    <app-card
+      [fruit]="fruit"
+      class="w-1/6"
+    />
+  }
+</div>
