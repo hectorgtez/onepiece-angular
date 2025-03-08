@@ -15,12 +15,12 @@
         <div class="flex flex-col">
           <!-- Name -->
           <p class="font-semibold">
-            Hector Gutierrez
+            {{ user.name | limitString: 15 }}
           </p>
 
           <!-- Email -->
           <p class="text-xs text-gray-300">
-            correo&#64;correo.com
+            {{ user.email | limitString: 19 }}
           </p>
         </div>
       </div>
